@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:task_13/screens/async_chat_bot_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
-  final double spacerHight = 24;
+  final double sizedboxHight = 24;
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +12,22 @@ class MainScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {}, child: Text("Task 1")),
-            SizedBox(height: spacerHight),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AsyncChatBotScreen()),
+                );
+              },
+              child: Text("Task 1"),
+            ),
+            SizedBox(height: sizedboxHight),
             ElevatedButton(onPressed: () {}, child: Text("Task 2")),
-            SizedBox(height: spacerHight),
+            SizedBox(height: sizedboxHight),
             ElevatedButton(onPressed: () {}, child: Text("Task 3")),
-            SizedBox(height: spacerHight),
+            SizedBox(height: sizedboxHight),
             ElevatedButton(onPressed: () {}, child: Text("Task 4")),
-            SizedBox(height: spacerHight),
+            SizedBox(height: sizedboxHight),
           ],
         ),
       ),
