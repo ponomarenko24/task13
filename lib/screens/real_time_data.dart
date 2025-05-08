@@ -22,7 +22,7 @@ class RealTimeDataScreenState extends State<RealTimeDataScreen> {
       try {
         int value = Random().nextInt(100) + 1;
         if (value > 90) {
-          throw Exception("Значення більше 90! ($value)");
+          throw ("Значення більше 90! ($value)");
         }
         _streamController.add(value);
       } catch (e) {
