@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_13/screens/async_chat_bot_screen.dart';
+import 'package:task_13/screens/async_timer_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -22,7 +23,12 @@ class MainScreen extends StatelessWidget {
               child: Text("Task 1"),
             ),
             SizedBox(height: sizedboxHight),
-            ElevatedButton(onPressed: () {}, child: Text("Task 2")),
+            ElevatedButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AsyncTimerScreen()),
+                );
+              }, child: Text("Task 2")),
             SizedBox(height: sizedboxHight),
             ElevatedButton(onPressed: () {}, child: Text("Task 3")),
             SizedBox(height: sizedboxHight),
